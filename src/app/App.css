@@ -1,4 +1,13 @@
+:root{
+    --color_principal:#802007;
+    --color_secundario:#EF798A;
+}
+
 body{
-    background: red;
+    background: var(--color_principal);
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+    
 }
 

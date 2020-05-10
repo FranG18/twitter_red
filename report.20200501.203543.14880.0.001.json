@@ -1,0 +1,153 @@
+
+{
+  "header": {
+    "reportVersion": 1,
+    "event": "Allocation failed - JavaScript heap out of memory",
+    "trigger": "FatalError",
+    "filename": "report.20200501.203543.14880.0.001.json",
+    "dumpEventTime": "2020-05-01T20:35:43Z",
+    "dumpEventTimeStamp": "1588376143231",
+    "processId": 14880,
+    "cwd": "C:\\Programacion\\TwitterRed\\TwitterRed-Mern",
+    "commandLine": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Programacion\\TwitterRed\\TwitterRed-Mern\\node_modules\\@babel\\node\\lib\\_babel-node",
+      "src/index.js"
+    ],
+    "nodejsVersion": "v12.13.1",
+    "wordSize": 64,
+    "arch": "x64",
+    "platform": "win32",
+    "componentVersions": {
+      "node": "12.13.1",
+      "v8": "7.7.299.13-node.16",
+      "uv": "1.33.1",
+      "zlib": "1.2.11",
+      "brotli": "1.0.7",
+      "ares": "1.15.0",
+      "modules": "72",
+      "nghttp2": "1.39.2",
+      "napi": "5",
+      "llhttp": "1.1.4",
+      "http_parser": "2.8.0",
+      "openssl": "1.1.1d",
+      "cldr": "35.1",
+      "icu": "64.2",
+      "tz": "2019c",
+      "unicode": "12.1"
+    },
+    "release": {
+      "name": "node",
+      "lts": "Erbium",
+      "headersUrl": "https://nodejs.org/download/release/v12.13.1/node-v12.13.1-headers.tar.gz",
+      "sourceUrl": "https://nodejs.org/download/release/v12.13.1/node-v12.13.1.tar.gz",
+      "libUrl": "https://nodejs.org/download/release/v12.13.1/win-x64/node.lib"
+    },
+    "osName": "Windows_NT",
+    "osRelease": "10.0.18362",
+    "osVersion": "Windows 10 Pro",
+    "osMachine": "x86_64",
+    "cpus": [
+      {
+        "model": "AMD Ryzen 5 2600 Six-Core Processor            ",
+        "speed": 3394,
+        "user": 1817718,
+        "nice": 0,
+        "sys": 1018500,
+        "idle": 16633671,
+        "irq": 119500
+      },
+      {
+        "model": "AMD Ryzen 5 2600 Six-Core Processor            ",
+        "speed": 3394,
+        "user": 836937,
+        "nice": 0,
+        "sys": 418671,
+        "idle": 18214281,
+        "irq": 36515
+      },
+      {
+        "model": "AMD Ryzen 5 2600 Six-Core Processor            ",
+        "speed": 3394,
+        "user": 2316531,
+        "nice": 0,
+        "sys": 699687,
+        "idle": 16453671,
+        "irq": 10015
+      },
+      {
+        "model": "AMD Ryzen 5 2600 Six-Core Processor            ",
+        "speed": 3394,
+        "user": 890140,
+        "nice": 0,
+        "sys": 164968,
+        "idle": 18414781,
+        "irq": 2937
+      },
+      {
+        "model": "AMD Ryzen 5 2600 Six-Core Processor            ",
+        "speed": 3394,
+        "user": 1897640,
+        "nice": 0,
+        "sys": 537109,
+        "idle": 17035140,
+        "irq": 6406
+      },
+      {
+        "model": "AMD Ryzen 5 2600 Six-Core Processor            ",
+        "speed": 3394,
+        "user": 771312,
+        "nice": 0,
+        "sys": 179640,
+        "idle": 18518937,
+        "irq": 4250
+      },
+      {
+        "model": "AMD Ryzen 5 2600 Six-Core Processor            ",
+        "speed": 3394,
+        "user": 1661671,
+        "nice": 0,
+        "sys": 431562,
+        "idle": 17376656,
+        "irq": 9812
+      },
+      {
+        "model": "AMD Ryzen 5 2600 Six-Core Processor            ",
+        "speed": 3394,
+        "user": 664171,
+        "nice": 0,
+        "sys": 134265,
+        "idle": 18671453,
+        "irq": 3703
+      },
+      {
+        "model": "AMD Ryzen 5 2600 Six-Core Processor            ",
+        "speed": 3394,
+        "user": 1610750,
+        "nice": 0,
+        "sys": 509718,
+        "idle": 17349421,
+        "irq": 15328
+      },
+      {
+        "model": "AMD Ryzen 5 2600 Six-Core Processor            ",
+        "speed": 3394,
+        "user": 705187,
+        "nice": 0,
+        "sys": 184093,
+        "idle": 18580421,
+        "irq": 4375
+      },
+      {
+        "model": "AMD Ryzen 5 2600 Six-Core Processor            ",
+        "speed": 3394,
+        "user": 1039406,
+        "nice": 0,
+        "sys": 522828,
+        "idle": 17907453,
+        "irq": 9406
+      },
+      {
+        "model": "AMD Ryzen 5 2600 Six-Core Processor            ",
+        "speed": 3394,
+        "u

@@ -1,9 +1,10 @@
 import app from './app'
 import mongoose from 'mongoose'
 
+
 app.set('port',process.env.PORT || 4000);
 
-const mongo_url='mongodb://localhost:27017/MERN';
+const mongo_url='mongodb://localhost:27017/TwitterRed';
 
 mongoose.Promise=global.Promise;
 
