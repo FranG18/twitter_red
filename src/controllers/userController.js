@@ -13,7 +13,9 @@ export const postSignup= async(req,res,next)=>{
     const usuario=new User({
         userName:userName,
         email:email,
-        password:password
+        password:password,
+        followers:[],
+        tweets:[]
     });
     User.findOne({email},(err,user)=>{
         if(err) return res.status(400).send({message:'Problema al crear al usuario'});

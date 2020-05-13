@@ -7,6 +7,11 @@ const userSchema=new Schema({
     userName:String,
     email:String,
     password:String,
+    followers:Array,
+    following:Array,
+    tweets:Array,
+    retweets:Array,
+    liked:Array
 },{
     timestamps:true
 }
