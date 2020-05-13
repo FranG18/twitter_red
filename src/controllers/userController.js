@@ -40,18 +40,18 @@ export const postLogin=(req,res,next)=>{
         if(err) next(err);
 
         if(!user){
-            return res.status(400).send('Email o contraseña no validos');
+            return res.status(400).send({message:'Email o contraseña no validos'});
         }
         req.logIn(user,(err)=>{
             if(err) next(err);
 
-            res.send('Login exitoso');
+            res.send({message:'Login Exitoso'});
         })
     })(req,res,next);
 }
 
 export const logout=(req,res)=>{
     req.logout();
-    res.send('Logout Exitoso');
+    res.send({message:'Logout Exitoso'});
 }
 

@@ -1,3 +1,180 @@
 .explore_container{
-    background: #A72608;
+    background: #802007;
+}
+
+.explore_content{
+    width: 1000px;
+    position: relative;
+    left:50%;
+    transform: translateX(-50%);
+    display: flex;   
+}
+
+.explore_box{
+    width: 600px;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+}
+
+.explore_box_title{
+    width: 100%;
+    height: 60px;
+    box-sizing: border-box;
+    padding: 10px;
+    color: white;
+    border-bottom: 1px solid gray;
+}
+
+.explore_box_title h3{
+    display: contents;
+}
+
+.explore_main_tendences{
+    width: 100%;
+    height: 330px;
+    box-sizing: border-box;
+    background: url('../../assets/explore_background_image.jpg');
+    background-position: center center;
+    background-size: cover;
+    border-bottom: 10px solid gray;
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+    padding: 12px;
+    cursor: pointer;
+}
+
+.explore_tendences_box{
+    width: 100%;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+}
+.tendences_box{
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: 1px solid gray;
+    padding: 10px 17px; 
+    cursor: pointer;
+    transition: all 300ms ease;
+    z-index: 200;
+    background-color: #802007;
+}
+
+.tendences_box:hover{
+    background-color: rgba(105,32,7,1);
+}
+
+.explore_login_box{
+    width: 350px;
+    margin-left: 16px;
+    box-sizing: border-box;
+    height: initial;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid gray;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.explore_login_image{
+    background: url('../../assets/twitter_login_sidebar_ilustration.png');
+    width: 240px;
+    height: 240px;
+    background-position: center center;
+    background-size: cover;
+}
+
+
+.explore_login_text{
+    font-size: 20px;
+    color: white;
+}
+
+.explore_login_email{
+    width: 97%;
+    background: rgba(110,32,7,1);
+    padding-top: 2px;
+    padding-left: 5px;
+    color: gray;
+    margin-top: 16px;
+    border-bottom: 1px solid gray;
+}
+
+.explore_login_password{
+    width: 97%;
+    background: rgba(110,32,7,1);
+    padding-top: 2px;
+    padding-left: 5px;
+    color: gray;
+    border-bottom: 1px solid gray;
+    margin-top:16px;
+}
+
+.explore_login_title{
+    margin-left: 10px;
+    font-size: 16px;
+
+}
+
+.explore_input_box{
+    height: 30px;
+}
+
+.explore_input{
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    background: none;
+    border: none;
+    margin-left: 8px;
+    margin-right: 8px;
+    color: white;
+}
+
+.explore_login_email:focus-within{
+    border-color: #F6BAC4;
+}
+
+.explore_login_password:focus-within{
+    border-color: #F6BAC4;
+}
+
+.explore_button_login{
+    width: 97%;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border:1px solid #F6BAC4;
+    margin-top: 16px;
+    color: #F6BAC4;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 150ms ease;
+}
+
+.explore_button_login:hover{
+    background: rgba(110,32,7,1);
+}
+
+.explore_login_o{
+    color:gray;
+    font-size: 12px;
+    margin-top: 16px;
+}
+
+.explore_button_registrer{
+    width: 97%;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:#F6BAC4 ;
+    margin-top: 16px;
+    color: white;
+    border-radius: 30px;
+    margin-bottom: 8px;
+    cursor: pointer;
 }

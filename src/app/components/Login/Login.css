@@ -11,6 +11,10 @@
     width: 4em;
 }
 
+h1{
+    color:white
+}
+
 .login_correo{
     width: 33.75em;
     background: rgba(110,32,7,1);
@@ -40,18 +44,19 @@
 .login_input{
     width: 100%;
     height: 100%;
-    font-size: 1.5em;
+    font-size: 1.3em;
     background: none;
     border: none;
     margin-left: 0.5em;
     margin-right: 0.5em;
+    color: white;
 }
 
-.login_correo:hover{
+.login_correo:focus-within{
     border-color: #F6BAC4;
 }
 
-.login_contraseña:hover{
+.login_contraseña:focus-within{
     border-color: #F6BAC4;
 }
 
@@ -65,6 +70,7 @@
     color: white;
     background: #F6BAC4;
     border-radius: 2em;
+    cursor: pointer;
 }
 
 .login_a{
@@ -75,4 +81,9 @@
 
 .login_a:hover{
     text-decoration: underline;
+}
+
+.login_span{
+    color:blue;
+    width: 33.75em;
 }

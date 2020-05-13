@@ -1,5 +1,7 @@
 import axios from 'axios';
-import regeneratorRuntime from "regenerator-runtime";
+import regeneratorRuntime, { async } from "regenerator-runtime";
+import querystring from 'querystring'
+
 const apiGraphUrl='http://localhost:4000/graphql';
 const apiUrl='http://localhost:4000/api/'
 const queries={
@@ -39,6 +41,36 @@ export const isAuthenticated=async ()=>{
         return data.authenticated;
     }catch(err){
         console.log(err);
+    }
+}
+
+export const login= async(email,password)=>{
+
+    const data={
+        email,
+        password    
+    }
+    try{
+        const response=await axios({
+            method:'POST',
+            url:`${apiUrl}login`,
+            headers: { 'content-type': 'application/x-www-form-urlencoded' },
+            data:querystring.stringify(data)
+        })
+        return response
+        
+    }catch(error){
+        console.log(error);
+    } 
+}
+
+export const logout= async()=>{
+    try{
+        const response=await axios.get(`${apiUrl}logout`)
+
+        return response
+    }catch(error){
+        console.log(error);
     }
 }
 
