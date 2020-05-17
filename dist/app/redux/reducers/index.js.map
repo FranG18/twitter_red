@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../src/app/redux/reducers/index.js"],"names":["user"],"mappings":";;;;;;;AAAA;;AACA;;;;eAEe,4BAAgB;AAC3BA,EAAAA,IAAI,EAAJA;AAD2B,CAAhB,C","sourcesContent":["import { combineReducers } from 'redux'\r\nimport user from './userReducer'\r\n\r\nexport default combineReducers({\r\n    user\r\n})"],"file":"index.js"}

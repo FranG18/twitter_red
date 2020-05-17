@@ -12,9 +12,8 @@ import regeneratorRuntime from "regenerator-runtime";
 
 const App = () => {
     return (
-
         <Provider store={store}>
-            <BrowserRouter>
+             <BrowserRouter>     
                 <Route
                     path='/'
                     exact
@@ -28,9 +27,7 @@ const App = () => {
                 <Route
                     path='/login'
                     component={Login} />
-
-            </BrowserRouter>
-
+                 </BrowserRouter>       
         </Provider>
     )
 }

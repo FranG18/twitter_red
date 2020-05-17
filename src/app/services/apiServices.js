@@ -2,10 +2,10 @@ import axios from 'axios';
 import regeneratorRuntime, { async } from "regenerator-runtime";
 import querystring from 'querystring'
 
-const apiGraphUrl='http://localhost:4000/graphql';
-const apiUrl='http://localhost:4000/api/'
-const queries={
-    getUsers:`query{
+const apiGraphUrl = 'http://localhost:3000/graphql';
+const apiUrl = 'http://localhost:3000/api/'
+const queries = {
+    getUsers: `query{
         users{
           _id
           userName
@@ -13,7 +13,7 @@ const queries={
           email
         }
       }`,
-    getUsersEmails:`{
+    getUsersEmails: `{
         users{
         _id
         email
@@ -21,58 +21,79 @@ const queries={
     }`
 };
 
-export const getUsers=async()=>{
-    try{
-        const {data}=await axios.post(apiGraphUrl,{
-            query:queries.getUsers
+export const getUsers = async () => {
+    try {
+        const { data } = await axios.post(apiGraphUrl, {
+            query: queries.getUsers
         });
         return data;
-    }catch(err){
+    } catch (err) {
         console.log(err)
         return [];
     }
-   
+
 }
 
-export const isAuthenticated=async ()=>{
-    try{
-        const {data}=await axios.get(`${apiUrl}authenticated`);
-      
+export const isAuthenticated = async () => {
+    try {
+        const { data } = await axios.get(`${apiUrl}authenticated`);
+
         return data.authenticated;
-    }catch(err){
+    } catch (err) {
         console.log(err);
     }
 }
 
-export const login= async(email,password)=>{
+export const login = async (email, password) => {
 
-    const data={
+    const data = {
         email,
-        password    
+        password
     }
-    try{
-        const response=await axios({
-            method:'POST',
-            url:`${apiUrl}login`,
+    try {
+        const response = await axios({
+            method: 'POST',
+            url: `${apiUrl}login`,
             headers: { 'content-type': 'application/x-www-form-urlencoded' },
-            data:querystring.stringify(data)
+            data: querystring.stringify(data)
         })
         return response
-        
-    }catch(error){
-        console.log(error);
-    } 
-}
 
-export const logout= async()=>{
-    try{
-        const response=await axios.get(`${apiUrl}logout`)
-
-        return response
-    }catch(error){
+    } catch (error) {
         console.log(error);
     }
 }
 
+export const logout = async () => {
+    try {
+        const response = await axios.get(`${apiUrl}logout`)
+        return response
+    } catch (error) {
+        console.log(error);
+    }
+}
 
+export const getUserData = async () => {
+    try {
+        const response = await axios.get(`${apiUrl}user`)
+        return response
+    } catch (error) {
+        console.log(error)
+    }
+}
 
+export const postTweet = async (tweetText) =>{
+
+    try{
+        const response=await axios({
+            method: 'POST',
+            url: `${apiUrl}createtweet`,
+            headers: { 'content-type': 'application/x-www-form-urlencoded' },
+            data: querystring.stringify({text:tweetText})
+        })
+
+        return response
+    }catch(error){
+        console.log(error)
+    }
+} 

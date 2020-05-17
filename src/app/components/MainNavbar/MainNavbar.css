@@ -1,0 +1,112 @@
+.mainnav_container{
+    width: 275px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+}
+
+.mainnav_navegation_box{
+    width: 275px;
+    display: flex;
+    flex-direction: column;
+}
+
+.mainnav_logo{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: all 300ms ease;
+    border-radius: 50px;
+    margin-top: 5px;
+}
+
+.mainnav_logo:hover{
+    background: rgba(246, 186, 196, 0.37);
+}
+
+.mainnav_logo img{
+    position: relative;
+    z-index: 10;
+}
+
+.mainnav_item{
+    width: max-content;
+    display: flex;
+    align-items: center;
+    padding: 7px;
+    border-radius: 30px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    margin-top: 12px;
+    transition: all 300ms ease;
+    cursor: pointer;
+}
+
+.mainnav_item:hover{
+    background: rgba(246, 186, 196, 0.37);
+    color:  #F6BAC4;
+}
+
+.mainnav_item img{
+    width: 33px;
+}
+
+.mainnav_item span{
+    color: white;
+    font-size: 20px;
+    margin-left: 12px;
+}
+
+.mainnav_button{
+    width: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #F6BAC4;
+    color: white;
+    padding: 15px 0;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 16px;
+}
+
+.mainnav_button:hover{
+    opacity: 0.9;
+}
+
+.mainnav_user_box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin-bottom: 12px;
+    padding: 5px;
+    color: white;
+    cursor: pointer;
+    transition: all 300ms ease;
+    border-radius: 50px;
+}
+
+.mainnav_user_box:hover{
+    background: rgba(246, 186, 196, 0.37);
+}
+
+.mainnav_user_box_texts{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.mainnav_user_box_profile{
+    width: 35px;
+    height: 35px;
+    border-radius: 35px;
+}
+
+.mainnav_user_box_arrow{
+    width: 13px;
+    height: 13px;
+    margin-right: 10px;
+}

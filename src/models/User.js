@@ -4,6 +4,7 @@ import bcrypt from 'bcrypt-nodejs';
 const Schema=mongoose.Schema;
 
 const userSchema=new Schema({
+    name:String,
     userName:String,
     email:String,
     password:String,
@@ -11,7 +12,8 @@ const userSchema=new Schema({
     following:Array,
     tweets:Array,
     retweets:Array,
-    liked:Array
+    liked:Array,
+    userPhoto:String
 },{
     timestamps:true
 }

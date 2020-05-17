@@ -37,11 +37,6 @@ app.use(passport.session());
 app.use(bodyparser.urlencoded({extended:true}));
 app.use(morgan('dev'));
 
-
-app.use(express.static(path.join(__dirname,'public')));
-app.use('/api',rutes);
-app.get('*', (req, res) => res.sendFile(path.resolve('src','public','index.html')));
-
 app.use((req,res,next)=>{
     res.header('Access-Control-Allow-Origin', 'GET, POST, PUT, DELETE');
     res.header('Access-Control-Allow-Headers', 'Authorization, X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Allow-Request-Method');
@@ -49,6 +44,11 @@ app.use((req,res,next)=>{
     res.header('Allow', 'GET, POST, OPTIONS, PUT, DELETE');
     next();
 });
+
+
+app.use(express.static(path.join(__dirname,'public')));
+app.use('/api',rutes);
+app.get('*', (req, res) => res.sendFile(path.resolve('src','public','index.html')));
 
 
 

@@ -1,0 +1,14 @@
+.home_container{
+    display: flex;
+    justify-content: center;
+}
+
+.home_content_box{
+    width: 598px;
+    background: green;
+}
+
+.home_search_extra{
+    width: 348px;
+    background: black;
+}

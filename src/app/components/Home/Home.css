@@ -1,0 +1,135 @@
+.home_container{
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.home_content_box{
+    width: 598px;
+    display: flex;
+    flex-direction: column;
+    background: #802007;
+}
+
+.home_search_extra{
+    width: 348px;
+    background: black;
+}
+
+
+.home_content_start{
+    width: 100%;
+    color: white;
+    border-bottom: 1px solid gray;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    font-size: 20px;
+    padding-left: 12px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+}
+
+.tweet_input_container{
+    width: 100%;
+    height: 118px;
+    display: grid;
+    border: 1px solid gray;
+    border-bottom: 10px solid gray;
+    grid-template-columns: 1fr 6fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "profile input button"
+                         "profile extras button";
+}   
+
+
+.tweet_input_profile{
+    grid-area: profile;
+}
+
+.tweet_input_profile img{
+    margin-left: 7px;
+    margin-top: 5px;
+}
+
+.tweet_input_input{
+    grid-area: input;
+    display: flex;
+    align-items: center;
+}
+
+.tweet_input{
+    background: none;
+    border: none;
+    font-size: 19px;
+    color: white;  
+    width: 100%;  
+}
+
+::placeholder{
+    color: #9197a3;
+    opacity: 1;
+}
+
+.input_focus::placeholder{
+    color: white;
+}
+
+.tweet_input_extras{
+    grid-area: extras;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 10px;
+}
+
+.tweet_extra_container{
+    transform: translateX(-7px);
+    margin-right: 10px;
+    cursor: pointer;
+    width: 38px;
+    height: 38px;
+    border-radius: 38px;
+    margin-right: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 300ms ease;
+}
+
+.tweet_extra_icon{
+    position: relative;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tweet_extra_container:hover{
+    background: rgba(246, 186, 196, 0.37);
+}
+
+.tweet_input_button{
+    grid-area: button;
+}
+
+.tweet_input_button{
+    color: white;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.tweet_input_button_button{
+    background: #F6BAC4;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    opacity: 0.9;
+    cursor: default;
+}
+
+.active{
+    opacity: 1;
+    cursor: pointer;
+
+}
+

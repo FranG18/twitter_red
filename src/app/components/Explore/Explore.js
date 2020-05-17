@@ -5,13 +5,13 @@ import {isAuthenticated,login} from '../../services/apiServices'
 import Navbar from '../Navbar'
 import ChargePage from '../ChargePage'
 import {tendences} from '../../data/exampleData'
+import HomeExplore from '../HomeExplore'
 
-const Explore=()=>{
 
+const Explore=(props)=>{
+    
     const [show,setShow]=useState(false)
     const [auth,setAuth]=useState(false);
-
-  
     
     /*Effect*/
     useEffect(()=>{
@@ -21,25 +21,27 @@ const Explore=()=>{
             if(response) {
                 setAuth(true)
             }
-
-            setTimeout(() => {
-                setShow(true)
-            }, 500);
-
-
+            setShow(true)     
         }
         action()
     },[])
 
-    return (
-        <div>
-            {(show) 
-            ? <ExplorePage auth={auth}/> 
-            : <ChargePage/>
-        } 
-        </div>
-        
-    )
+    if(props.location.state && props.location.state.direct){
+        return(
+            <ExplorePage auth={true}/>
+        )
+    }else{
+        return (
+            <div>      
+                {(show) 
+                ? <ExplorePage auth={auth}/> 
+                : <ChargePage/>
+            } 
+            </div>
+            
+        )
+    }
+    
 }
 
 
@@ -49,16 +51,7 @@ const ExplorePage=({auth})=>{
         <div>
              { (!auth) 
                 ? <ExploreDontAuth/>
-                : <ExploreAuth/> }        
-        </div>
-    )
-}
-
-const ExploreAuth=()=>{
-    
-    return(
-        <div>
-            Auth
+                : <HomeExplore/> }        
         </div>
     )
 }

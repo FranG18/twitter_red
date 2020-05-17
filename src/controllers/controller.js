@@ -20,7 +20,7 @@ const controller = {
             parent: (parent) ? parent : null,
             likes: [],
             retweets: [],
-            childrens: []
+            childrens: [],
         })
 
         try {
@@ -39,29 +39,29 @@ const controller = {
             return res.status(400).send({ error })
         }
     },
-    deleteTweet: async(req,res)=>{
-        const {tweetId}=req.body
-        const _id=req.user._id
+    deleteTweet: async (req, res) => {
+        const { tweetId } = req.body
+        const _id = req.user._id
 
-        try{
-            const tweet=await Tweet.findById(tweetId)
+        try {
+            const tweet = await Tweet.findById(tweetId)
 
-            const user=await User.findById(_id)  
-            user.tweets.splice(user.tweets.indexOf(tweetId),1)
+            const user = await User.findById(_id)
+            user.tweets.splice(user.tweets.indexOf(tweetId), 1)
             await user.save()
-            
-            if(tweet.parent){
-                const parentTweet=await Tweet.findById(tweet.parent)
-                parentTweet.childrens.splice(parentTweet.childrens.indexOf(tweetId),1)
+
+            if (tweet.parent) {
+                const parentTweet = await Tweet.findById(tweet.parent)
+                parentTweet.childrens.splice(parentTweet.childrens.indexOf(tweetId), 1)
                 await parentTweet.save()
             }
 
             await Tweet.findByIdAndDelete(tweetId)
 
-            return res.status(200).send({message:'Tweet Eliminado'})
+            return res.status(200).send({ message: 'Tweet Eliminado' })
 
-        }catch(error){
-            return res.status(400).send({error})
+        } catch (error) {
+            return res.status(400).send({ error })
         }
 
     },
@@ -140,6 +140,35 @@ const controller = {
 
             return res.status(200).send({ message: 'Reetweet Cambiado' })
 
+        } catch (error) {
+            return res.status(400).send({ error })
+        }
+    },
+    getTweet: async (req, res) => {
+
+        const { _id } = req.query
+
+        try {
+            return res.status(200).send({ tweet: await Tweet.findById(_id) })
+        } catch (error) {
+            return res.status(400).send({ error })
+        }
+
+    },
+    getAllTweets: async (req, res) => {
+
+        try {
+            return res.status(200).send({ tweets: await Tweet.find({}) })
+        } catch (error) {
+            return res.status(400).send({ error })
+        }
+    },
+    getTweets: async (req, res) => {
+
+        const { _id } = req.query
+
+        try {
+            return res.status(200).send({ tweets: await Tweet.find({ userId: _id }) })
         } catch (error) {
             return res.status(400).send({ error })
         }
